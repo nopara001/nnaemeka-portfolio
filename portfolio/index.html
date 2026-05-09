@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nnaemeka Opara — Builder. Strategist. Creator.</title>
+
+  <meta name="description" content="Nnaemeka Opara — Product Manager, Engineer, and Content Creator. USC '26. Incoming TPM at Microsoft.">
+  <meta name="keywords" content="Nnaemeka Opara, Product Manager, TPM, Microsoft, USC, Content Creator, Brand Partnerships">
+  <meta property="og:title" content="Nnaemeka Opara — Builder. Strategist. Creator.">
+  <meta property="og:description" content="Product Manager, Engineer, and Content Creator bridging tech, brand, and culture.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Nnaemeka Opara — Builder. Strategist. Creator.">
+  <meta name="twitter:description" content="PM, Engineer, and Content Creator. USC '26. Incoming TPM @ Microsoft.">
+  <link rel="canonical" href="https://nnaemekaopara.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+@import url('https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800&display=swap&display=swap&display=swap');
+</style>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root {
+  --bg: #f5f2ee;
+  --bg2: #edeae4;
+  --white: #ffffff;
+  --ink: #1a1714;
+  --ink2: #4a4641;
+  --ink3: #9a9590;
+  --pop: #166534;
+  --pop2: #16a34a;
+  --teal: #15803d;
+  --teal2: #22c55e;
+  --lime: #65a30d;
+  --border: rgba(26,23,20,0.1);
+  --border2: rgba(26,23,20,0.06);
+  --serif: 'Cabinet Grotesk', system-ui, sans-serif;
+  --sans: 'DM Sans', system-ui, sans-serif;
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-weight: 300;
+  line-height: 1.7;
+  overflow-x: hidden;
+  cursor: none;
+}
+
+/* CUSTOM CURSOR */
+.cursor {
+  width: 12px; height: 12px;
+  background: var(--pop);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s, width 0.3s var(--ease), height 0.3s var(--ease), background 0.3s;
+  mix-blend-mode: multiply;
+}
+.cursor.big { width: 48px; height: 48px; opacity: 0.5; }
+.cursor.link { background: var(--teal); width: 32px; height: 32px; }
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1.1rem 2.5rem;
+  background: rgba(245,242,238,0.88);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border2);
+}
+.nav-logo {
+  font-family: var(--serif); font-size: 1rem; font-weight: 800;
+  color: var(--ink); text-decoration: none; letter-spacing: -0.01em;
+}
+.nav-logo span { color: var(--pop); }
+.nav-links { display: flex; gap: 2.5rem; list-style: none; }
+.nav-links a {
+  font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--ink2); text-decoration: none; font-weight: 500;
+  transition: color 0.2s; position: relative;
+}
+.nav-links a::after {
+  content: ''; position: absolute; bottom: -2px; left: 0; right: 0;
+  height: 1.5px; background: var(--pop); transform: scaleX(0);
+  transition: transform 0.25s var(--ease); transform-origin: left;
+}
+.nav-links a:hover { color: var(--pop); }
+.nav-links a:hover::after { transform: scaleX(1); }
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  padding-top: 64px;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  position: relative;
+  overflow: hidden;
+}
+.hero-main {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 0;
+  min-height: calc(100vh - 64px - 100px);
+}
+.hero-text {
+  padding: 4rem 3rem 3rem 2.5rem;
+  display: flex; flex-direction: column; justify-content: center;
+  position: relative;
+}
+.hero-tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--pop); font-weight: 600; margin-bottom: 2rem;
+}
+.hero-tag-dot {
+  width: 6px; height: 6px; background: var(--pop);
+  border-radius: 50%; animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%,100%{transform:scale(1);opacity:1}
+  50%{transform:scale(1.6);opacity:0.5}
+}
+.hero-name {
+  font-family: var(--serif);
+  font-size: clamp(72px, 10vw, 130px);
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  color: var(--ink);
+  margin-bottom: 1.5rem;
+}
+.hero-name .line2 { color: var(--pop); }
+.hero-headline {
+  font-size: 1.15rem;
+  color: var(--ink2);
+  font-weight: 300;
+  line-height: 1.7;
+  max-width: 480px;
+  margin-bottom: 2.5rem;
+}
+.hero-headline strong { color: var(--ink); font-weight: 500; }
+.hero-cta-row { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+.btn-primary {
+  font-family: var(--serif); font-size: 0.82rem; font-weight: 700;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  background: var(--pop); color: white; border: none;
+  padding: 0.85rem 1.75rem; border-radius: 100px;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.2s var(--ease);
+  display: inline-block;
+}
+.btn-primary:hover { background: var(--ink); transform: translateY(-2px); }
+.btn-ghost {
+  font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--ink2); text-decoration: none; font-weight: 500;
+  display: inline-flex; align-items: center; gap: 6px;
+  transition: color 0.2s;
+}
+.btn-ghost:hover { color: var(--pop); }
+
+/* HERO PHOTO */
+.hero-photo-col {
+  position: relative; overflow: hidden;
+  border-left: 1px solid var(--border2);
+}
+.hero-photo-col img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: top center;
+  display: block;
+}
+.hero-photo-badge {
+  position: absolute; bottom: 2rem; left: -1px;
+  background: var(--pop); color: white;
+  font-family: var(--serif); font-size: 0.7rem; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 0.6rem 1.25rem;
+  border-radius: 0 100px 100px 0;
+}
+
+/* MARQUEE */
+.marquee-wrap {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: var(--ink);
+  overflow: hidden;
+  padding: 0.9rem 0;
+  white-space: nowrap;
+}
+.marquee-track {
+  display: inline-flex; gap: 0;
+  animation: marquee 22s linear infinite;
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-item {
+  font-family: var(--serif); font-size: 0.78rem; font-weight: 700;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--bg); padding: 0 2.5rem;
+}
+.marquee-item span { color: var(--pop2); margin-right: 2.5rem; }
+
+
+
+/* SECTIONS */
+section { padding: 7rem 2.5rem; }
+section.alt { background: var(--white); }
+section.dark { background: var(--ink); }
+
+.section-label {
+  font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--ink3); font-weight: 600; margin-bottom: 0.75rem;
+  display: flex; align-items: center; gap: 0.75rem;
+}
+.section-label::before {
+  content: ''; display: block; width: 24px; height: 1.5px; background: var(--pop);
+}
+.section-h2 {
+  font-family: var(--serif); font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800; letter-spacing: -0.03em; color: var(--ink);
+  line-height: 1.05; margin-bottom: 3.5rem;
+}
+
+/* PROJECT CARDS */
+.projects-list { display: flex; flex-direction: column; gap: 1px; background: var(--border); border-radius: 16px; overflow: hidden; }
+
+.proj-card {
+  background: var(--white);
+  display: grid; grid-template-columns: 1fr 1fr;
+  min-height: 420px;
+  transition: background 0.25s;
+  opacity: 0; transform: translateY(32px);
+  transition: opacity 0.65s var(--ease), transform 0.65s var(--ease), background 0.25s;
+}
+.proj-card.visible { opacity: 1; transform: translateY(0); }
+.proj-card:hover { background: var(--bg); }
+.proj-card.flip { grid-template-columns: 1fr 1fr; }
+.proj-card.flip .proj-card-img { order: 2; }
+.proj-card.flip .proj-card-body { order: 1; }
+
+.proj-card-img {
+  position: relative; overflow: hidden;
+  border-right: 1px solid var(--border2);
+}
+.proj-card.flip .proj-card-img { border-right: none; border-left: 1px solid var(--border2); }
+.proj-card-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s var(--ease);
+  display: block;
+}
+.proj-card:hover .proj-card-img img { transform: scale(1.04); }
+.proj-card-img-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(26,23,20,0.5) 0%, transparent 50%);
+}
+.proj-card-img-tag {
+  position: absolute; top: 1.25rem; left: 1.25rem;
+  background: white; color: var(--ink);
+  font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase;
+  font-weight: 600; padding: 4px 10px; border-radius: 100px;
+}
+.proj-card-img-award {
+  position: absolute; bottom: 1.25rem; left: 1.25rem; right: 1.25rem;
+  font-size: 0.75rem; color: white; font-style: italic;
+  line-height: 1.4;
+}
+
+.proj-card-body {
+  padding: 3rem 2.75rem;
+  display: flex; flex-direction: column; justify-content: space-between;
+}
+.proj-co {
+  font-size: 0.65rem; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--pop); font-weight: 600; margin-bottom: 0.5rem;
+}
+.proj-title {
+  font-family: var(--serif); font-size: 1.65rem; font-weight: 800;
+  letter-spacing: -0.02em; color: var(--ink); line-height: 1.1;
+  margin-bottom: 1rem;
+}
+.proj-desc {
+  font-size: 0.95rem; color: var(--ink2); line-height: 1.9;
+  margin-bottom: 1.5rem; font-weight: 300; flex: 1;
+}
+.proj-metrics-row {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px;
+  background: var(--border2);
+  border-radius: 10px; overflow: hidden; margin-bottom: 1.5rem;
+}
+.p-metric {
+  background: var(--bg); padding: 0.85rem 1rem;
+  transition: background 0.2s;
+}
+.proj-card:hover .p-metric { background: var(--bg2); }
+.p-val {
+  font-family: var(--serif); font-size: 1.4rem; font-weight: 800;
+  letter-spacing: -0.02em; color: var(--ink); line-height: 1; margin-bottom: 2px;
+}
+.p-label { font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink3); font-weight: 500; }
+
+.case-accordion { border-top: 1px solid var(--border2); }
+.case-row {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border2);
+  display: grid; grid-template-columns: 80px 1fr; gap: 1rem;
+  font-size: 0.87rem;
+}
+.c-label { font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink3); font-weight: 600; padding-top: 2px; }
+.c-val { color: var(--ink2); line-height: 1.75; }
+.c-val strong { color: var(--ink); font-weight: 500; }
+
+/* CREATOR SECTION */
+.creator-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start;
+}
+.creator-numbers {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
+  background: var(--border); border-radius: 16px; overflow: hidden;
+  margin-bottom: 2rem;
+}
+.c-num-cell {
+  background: var(--bg); padding: 1.5rem;
+  transition: background 0.2s;
+}
+.c-num-cell:hover { background: var(--bg2); }
+.c-big {
+  font-family: var(--serif); font-size: 2.4rem; font-weight: 800;
+  letter-spacing: -0.03em; color: var(--ink); line-height: 1; margin-bottom: 4px;
+}
+.c-lbl { font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink3); font-weight: 600; }
+
+.highlight-box {
+  background: var(--pop); color: white;
+  border-radius: 12px; padding: 1.5rem;
+  margin-bottom: 1.75rem;
+  display: flex; align-items: center; gap: 1.5rem;
+}
+.h-box-num { font-family: var(--serif); font-size: 2.8rem; font-weight: 800; letter-spacing: -0.03em; line-height: 1; }
+.h-box-text { font-size: 0.82rem; line-height: 1.6; opacity: 0.92; }
+
+.brands-wrap { margin-bottom: 1.75rem; }
+.brands-label { font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink3); font-weight: 600; margin-bottom: 0.75rem; }
+.brand-pills { display: flex; flex-wrap: wrap; gap: 8px; }
+.brand-pill {
+  font-size: 0.7rem; padding: 5px 12px;
+  border: 1px solid var(--border); border-radius: 100px;
+  color: var(--ink2); font-weight: 400;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+.brand-pill:hover { background: var(--pop); color: white; border-color: var(--pop); }
+
+.creator-right {}
+.creator-photo-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
+  border-radius: 16px; overflow: hidden; background: var(--border);
+  margin-bottom: 2rem;
+}
+.creator-photo-grid img {
+  width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block;
+  transition: transform 0.5s var(--ease);
+}
+.creator-photo-grid div { overflow: hidden; }
+.creator-photo-grid div:hover img { transform: scale(1.06); }
+
+.rates-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
+  background: var(--border); border-radius: 12px; overflow: hidden;
+}
+.rate-cell {
+  background: var(--white); padding: 1.1rem 1.25rem;
+  transition: background 0.2s;
+}
+.rate-cell:hover { background: var(--bg); }
+.rate-service { font-size: 0.8rem; color: var(--ink2); margin-bottom: 4px; }
+.rate-price { font-family: var(--serif); font-size: 1.3rem; font-weight: 800; color: var(--pop); letter-spacing: -0.02em; }
+
+/* RECOGNITION */
+.awards-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
+  background: var(--border); border-radius: 16px; overflow: hidden;
+}
+.award-card {
+  background: var(--white); padding: 2rem 1.75rem;
+  transition: background 0.2s; position: relative; overflow: hidden;
+  opacity: 0; transform: translateY(20px);
+  transition: opacity 0.5s var(--ease), transform 0.5s var(--ease), background 0.2s;
+}
+.award-card.visible { opacity: 1; transform: translateY(0); }
+.award-card:hover { background: var(--bg); }
+.award-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0;
+  height: 3px; background: var(--pop);
+  transform: scaleX(0); transition: transform 0.3s var(--ease);
+  transform-origin: left;
+}
+.award-card:hover::before { transform: scaleX(1); }
+.award-org { font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--pop); font-weight: 700; margin-bottom: 0.5rem; }
+.award-name { font-family: var(--serif); font-size: 1.05rem; font-weight: 700; color: var(--ink); line-height: 1.4; }
+
+/* ABOUT */
+.about-wrap {
+  display: grid; grid-template-columns: 400px 1fr; gap: 5rem; align-items: center;
+}
+.about-photo {
+  position: relative;
+  border-radius: 16px; overflow: hidden;
+  aspect-ratio: 3/4;
+}
+.about-photo img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: top;
+  display: block;
+  transition: transform 0.7s var(--ease);
+}
+.about-photo:hover img { transform: scale(1.04); }
+.about-photo-badge {
+  position: absolute; bottom: 1.5rem; left: 1.5rem; right: 1.5rem;
+  background: rgba(245,242,238,0.95);
+  border-radius: 10px; padding: 1rem 1.25rem;
+  backdrop-filter: blur(8px);
+}
+.about-photo-badge-title {
+  font-family: var(--serif); font-size: 0.9rem; font-weight: 800; color: var(--ink); margin-bottom: 2px;
+}
+.about-photo-badge-sub { font-size: 0.72rem; color: var(--ink2); }
+
+.about-content {}
+.about-h { font-family: var(--serif); font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 800; letter-spacing: -0.03em; color: var(--ink); line-height: 1.1; margin-bottom: 1.5rem; }
+.about-h em { color: var(--pop); font-style: italic; }
+.about-p { font-size: 0.95rem; color: var(--ink2); line-height: 1.95; margin-bottom: 1.5rem; }
+.about-p strong { color: var(--ink); font-weight: 500; }
+.skills-wrap { display: flex; flex-wrap: wrap; gap: 8px; margin: 1.5rem 0 2rem; }
+.skill-chip {
+  font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 5px 12px; border-radius: 100px;
+  border: 1px solid var(--border); color: var(--ink2); font-weight: 500;
+  transition: background 0.15s, color 0.15s;
+}
+.skill-chip:hover { background: var(--ink); color: var(--bg); }
+
+/* FOOTER */
+footer {
+  background: var(--ink); color: var(--bg);
+  padding: 4rem 2.5rem 3rem;
+}
+.footer-top {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;
+  padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.1);
+  margin-bottom: 2rem;
+}
+.footer-name {
+  font-family: var(--serif); font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800; letter-spacing: -0.03em; color: white; line-height: 1;
+  margin-bottom: 1rem;
+}
+.footer-tagline { font-size: 0.95rem; color: rgba(255,255,255,0.5); line-height: 1.75; margin-top: 0.75rem; }
+.footer-links-col {}
+.footer-links-label {
+  font-size: 0.62rem; letter-spacing: 0.16em; text-transform: uppercase;
+  color: rgba(255,255,255,0.35); margin-bottom: 1.25rem; font-weight: 600;
+}
+.footer-links-list { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+.footer-links-list a {
+  font-size: 0.9rem; color: rgba(255,255,255,0.7); text-decoration: none;
+  transition: color 0.2s; font-weight: 300;
+  display: inline-flex; align-items: center; gap: 0.5rem;
+}
+.footer-links-list a:hover { color: var(--pop2); }
+.footer-bottom {
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 0.7rem; color: rgba(255,255,255,0.3); letter-spacing: 0.06em;
+}
+
+
+.tiktok-grid-6 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+.tiktok-card {
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--bg2);
+}
+.tiktok-card .tiktok-embed {
+  margin: 0 !important;
+}
+@media (max-width: 900px) {
+  .tiktok-grid-6 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .tiktok-grid-6 { grid-template-columns: 1fr; }
+}
+
+/* SCROLL REVEAL */
+.reveal {
+  opacity: 0; transform: translateY(28px);
+  transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+
+  .nav-hamburger {
+    display: none; flex-direction: column; gap: 5px;
+    background: none; border: none; cursor: none; padding: 4px;
+  }
+  .nav-hamburger span {
+    display: block; width: 22px; height: 2px;
+    background: var(--ink); border-radius: 2px;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+  .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .mobile-nav {
+    display: none; position: fixed; inset: 0; top: 56px;
+    background: rgba(245,242,238,0.97); backdrop-filter: blur(16px);
+    z-index: 99; flex-direction: column; align-items: center;
+    justify-content: center; gap: 2.5rem;
+  }
+  .mobile-nav.open { display: flex; }
+  .mobile-nav a {
+    font-family: var(--serif); font-size: 2rem; font-weight: 800;
+    color: var(--ink); text-decoration: none; letter-spacing: -0.02em;
+    transition: color 0.2s;
+  }
+  .mobile-nav a:hover { color: var(--pop); }
+  @media (max-width: 640px) {
+    .nav-hamburger { display: flex; }
+    .nav-links { display: none !important; }
+  }
+  /* RESPONSIVE */
+@media (max-width: 1024px) {
+  .hero-main { grid-template-columns: 1fr; }
+  .hero-photo-col { display: none; }
+  
+  .proj-card { grid-template-columns: 1fr; min-height: auto; }
+  .proj-card-img { aspect-ratio: 16/9; border-right: none !important; border-bottom: 1px solid var(--border2); }
+  .proj-card.flip .proj-card-img { order: 0; }
+  .proj-card.flip .proj-card-body { order: 0; }
+  .creator-grid { grid-template-columns: 1fr; }
+  .about-wrap { grid-template-columns: 1fr; }
+  .about-photo { max-width: 340px; aspect-ratio: 1/1; }
+  .awards-grid { grid-template-columns: 1fr 1fr; }
+  .footer-top { grid-template-columns: 1fr; gap: 2rem; }
+}
+@media (max-width: 640px) {
+  nav { padding: 1rem 1.25rem; }
+  .nav-links { display: none; }
+  section { padding: 4rem 1.25rem; }
+  .hero-text { padding: 3rem 1.25rem; }
+  
+  .awards-grid { grid-template-columns: 1fr; }
+  .creator-numbers { grid-template-columns: 1fr 1fr; }
+  .rates-grid { grid-template-columns: 1fr; }
+  footer { padding: 3rem 1.25rem 2rem; }
+  .proj-metrics-row { grid-template-columns: 1fr 1fr; }
+}
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+    .marquee-track { animation: none; }
+    .reveal, .proj-card, .award-card { opacity: 1 !important; transform: none !important; }
+  }
+</style>
+<script async src="https://www.tiktok.com/embed.js"></script>
+</head>
+<body>
+
+<a href="#work" class="skip-link">Skip to content</a>
+<div class="cursor" id="cursor"></div>
+
+<nav>
+  <a class="nav-logo" href="#">N<span>.</span>O</a>
+  <ul class="nav-links">
+    <li><a href="#work">Work</a></li>
+    <li><a href="#creator">Creator</a></li>
+    <li><a href="#recognition">Recognition</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="mailto:nopara@usc.edu">Contact</a></li>
+  </ul>
+  <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-nav" id="mobileNav" role="dialog" aria-label="Mobile navigation">
+  <a href="#work" onclick="closeMobileNav()">Work</a>
+  <a href="#creator" onclick="closeMobileNav()">Creator</a>
+  <a href="#recognition" onclick="closeMobileNav()">Recognition</a>
+  <a href="#about" onclick="closeMobileNav()">About</a>
+  <a href="mailto:nopara@usc.edu">Contact</a>
+  <a href="resume.pdf" target="_blank">Résumé</a>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-main">
+    <div class="hero-text">
+      <div class="hero-tag">
+        <div class="hero-tag-dot"></div>
+        Incoming TPM @ Microsoft &nbsp;&middot;&nbsp; USC &rsquo;26
+      </div>
+      <h1 class="hero-name">
+        Nnaemeka<br><span class="line2">Opara.</span>
+      </h1>
+      <p class="hero-headline">
+        <strong>Builder. Strategist. Creator.</strong><br>
+        I ship security products at Microsoft, lead 1,000+ engineers across NSBE, and build a content platform that&rsquo;s racked up 5.6M views &mdash; all at the same time.
+      </p>
+      <div class="hero-cta-row">
+        <a href="#work" class="btn-primary">See my work</a>
+        <a href="mailto:nopara@usc.edu" class="btn-ghost">Get in touch &rarr;</a>
+      </div>
+    </div>
+    <div class="hero-photo-col">
+      <img src="images/img_2.jpg" alt="Nnaemeka Opara at USC graduation" loading="eager" fetchpriority="high">
+      <div class="hero-photo-badge">USC Class of 2026</div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+    <div class="strip-stat-label">Security case linkages at Microsoft</div>
+    <div class="strip-stat-bar"></div>
+  </div>
+  <div class="strip-stat">
+    <div class="strip-stat-num"><span class="accent">$180K+</span></div>
+    <div class="strip-stat-label">Revenue generated via NSBE conference</div>
+    <div class="strip-stat-bar"></div>
+  </div>
+  <div class="strip-stat">
+    <div class="strip-stat-num"><span class="accent">5.6M</span></div>
+    <div class="strip-stat-label">Total views across TikTok & Instagram</div>
+    <div class="strip-stat-bar"></div>
+  </div>
+  <div class="strip-stat">
+    <div class="strip-stat-num"><span class="accent">40+</span></div>
+    <div class="strip-stat-label">Paid brand partnerships</div>
+    <div class="strip-stat-bar"></div>
+  </div>
+</div>
+
+<!-- WORK -->
+<section id="work" class="alt">
+  <div class="section-label reveal">Selected Work</div>
+  <h2 class="section-h2 reveal">Things I&rsquo;ve built<br>&amp; led.</h2>
+
+  <div class="projects-list">
+
+    <!-- MICROSOFT -->
+    <div class="proj-card">
+      <div class="proj-card-img">
+        <img loading="lazy" decoding="async" src="images/img_3.jpg" alt="Nnaemeka at Microsoft campus">
+        <div class="proj-card-img-overlay"></div>
+        <div class="proj-card-img-tag">Product Management</div>
+        <div class="proj-card-img-award">&#127942; Best Cross-Collaboration Impact &mdash; 2025 CISO Intern Showcase</div>
+      </div>
+      <div class="proj-card-body">
+        <div>
+          <div class="proj-co">Microsoft &middot; Redmond, WA &middot; 2025</div>
+          <h3 class="proj-title">Security Incident Management Feature</h3>
+          <p class="proj-desc">Owned the full product lifecycle of a security tooling feature for Microsoft&rsquo;s CISO org &mdash; PRD, 10+ Figma mockups, Agile ceremonies, and a 10-week delivery roadmap. Led cross-functional alignment across engineering, product, and senior leadership.</p>
+          <div class="proj-metrics-row">
+            <div class="p-metric"><div class="p-val">800+</div><div class="p-label">Case linkages enabled</div></div>
+            <div class="p-metric"><div class="p-val">10wk</div><div class="p-label">Delivery roadmap</div></div>
+            <div class="p-metric"><div class="p-val">5+</div><div class="p-label">User interviews</div></div>
+            <div class="p-metric"><div class="p-val">10+</div><div class="p-label">Hi-fi mockups</div></div>
+          </div>
+        </div>
+        <div class="case-accordion">
+          <div class="case-row"><span class="c-label">Context</span><span class="c-val">Microsoft&rsquo;s CISO org needed a scalable way to link and manage related security incidents &mdash; reducing analyst toil in high-volume environments.</span></div>
+          <div class="case-row"><span class="c-label">My Role</span><span class="c-val"><strong>Technical Product Manager Intern</strong> &mdash; sole PM owning the feature end-to-end across a 10-week sprint cycle.</span></div>
+          <div class="case-row"><span class="c-label">Strategy</span><span class="c-val">Interviewed 5+ Security PMs to assess automation potential across 50+ critical triaging tasks. Used findings to prioritize a phased PRD.</span></div>
+          <div class="case-row"><span class="c-label">Results</span><span class="c-val"><strong>800+ case linkages enabled. Won Best Cross-Collaboration Impact</strong> at the CISO Intern Showcase. Returning full-time as TPM, August 2026.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- NSBE -->
+    <div class="proj-card flip">
+      <div class="proj-card-img">
+        <img loading="lazy" decoding="async" src="images/img_0.jpg" alt="Nnaemeka at AfroTech Conference">
+        <div class="proj-card-img-overlay"></div>
+        <div class="proj-card-img-tag">Strategy &middot; Operations</div>
+      </div>
+      <div class="proj-card-body">
+        <div>
+          <div class="proj-co">NSBE &middot; Region VI &middot; 2024&ndash;Present</div>
+          <h3 class="proj-title">Flagship Conference &amp; Regional Leadership</h3>
+          <p class="proj-desc">Served as Region VI Chairperson for NSBE &mdash; the organization&rsquo;s largest geographical region &mdash; managing 25 student leaders, overseeing 60+ chapters, and executing a flagship conference that generated $180K+ in revenue.</p>
+          <div class="proj-metrics-row">
+            <div class="p-metric"><div class="p-val">1,000+</div><div class="p-label">Attendees</div></div>
+            <div class="p-metric"><div class="p-val">$180K+</div><div class="p-label">Revenue generated</div></div>
+            <div class="p-metric"><div class="p-val">60+</div><div class="p-label">Chapters overseen</div></div>
+            <div class="p-metric"><div class="p-val">1K+</div><div class="p-label">Students represented</div></div>
+          </div>
+        </div>
+        <div class="case-accordion">
+          <div class="case-row"><span class="c-label">Context</span><span class="c-val">NSBE Region VI needed stronger chapter cohesion, a flagship event to unite 1,000+ students, and increased corporate sponsorship revenue.</span></div>
+          <div class="case-row"><span class="c-label">My Role</span><span class="c-val"><strong>Region VI Chairperson</strong> &mdash; managing 25 student leaders, driving regional strategy, and serving as primary liaison to national NSBE leadership.</span></div>
+          <div class="case-row"><span class="c-label">Strategy</span><span class="c-val">Designed a conference format combining career fair access, technical workshops, and community programming to maximize value for STEM students.</span></div>
+          <div class="case-row"><span class="c-label">Also led</span><span class="c-val">Year-long MLT social media strategy + joint USC&ndash;MLT professional development workshop reaching 60+ students across 5 campus orgs.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SERVICENOW -->
+    <div class="proj-card">
+      <div class="proj-card-img">
+        <img loading="lazy" decoding="async" src="images/img_1.jpg" alt="Nnaemeka at AfroTech evening">
+        <div class="proj-card-img-overlay"></div>
+        <div class="proj-card-img-tag">Technical Program Management</div>
+      </div>
+      <div class="proj-card-body">
+        <div>
+          <div class="proj-co">ServiceNow &middot; San Diego, CA &middot; 2024</div>
+          <h3 class="proj-title">Engineering Workflow Research &amp; Product Roadmap</h3>
+          <p class="proj-desc">Led discovery across ServiceNow business units to surface Engineering PM pain points. Synthesized 15+ interviews into 3 solution proposals and a full product roadmap, plus built a SharePoint hub centralizing resources for 36+ EPMs.</p>
+          <div class="proj-metrics-row">
+            <div class="p-metric"><div class="p-val">15+</div><div class="p-label">User interviews</div></div>
+            <div class="p-metric"><div class="p-val">3</div><div class="p-label">Solutions proposed</div></div>
+            <div class="p-metric"><div class="p-val">36+</div><div class="p-label">EPMs reached</div></div>
+            <div class="p-metric"><div class="p-val">1</div><div class="p-label">Full roadmap delivered</div></div>
+          </div>
+        </div>
+        <div class="case-accordion">
+          <div class="case-row"><span class="c-label">Context</span><span class="c-val">Engineering PMs across multiple ServiceNow business units lacked unified tooling and a centralized resource hub, creating fragmented workflows.</span></div>
+          <div class="case-row"><span class="c-label">My Role</span><span class="c-val"><strong>Technical Program Management Intern</strong> &mdash; led discovery through delivery of recommendations independently.</span></div>
+          <div class="case-row"><span class="c-label">Execution</span><span class="c-val">Conducted 15+ interviews across business units, synthesized findings in Miro, built in-depth product roadmap for most critical solution.</span></div>
+          <div class="case-row"><span class="c-label">Learning</span><span class="c-val">Synthesis &mdash; not the interviews themselves &mdash; is where product decisions are won. This directly shaped how I scope PRDs at Microsoft.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CHEVRON -->
+    <div class="proj-card flip">
+      <div class="proj-card-img">
+        <img loading="lazy" decoding="async" src="images/img_5.jpg" alt="Nnaemeka at CISO showcase">
+        <div class="proj-card-img-overlay"></div>
+        <div class="proj-card-img-tag">Software Engineering</div>
+      </div>
+      <div class="proj-card-body">
+        <div>
+          <div class="proj-co">Chevron &middot; Houston, TX &middot; 2023</div>
+          <h3 class="proj-title">Network Automation &amp; Firewall Dashboard</h3>
+          <p class="proj-desc">Built a Python script to automate location updates for 200+ network access points across Wireless LAN Controllers, and designed a user-facing firewall metadata dashboard via XML API &mdash; both informed by direct user research.</p>
+          <div class="proj-metrics-row">
+            <div class="p-metric"><div class="p-val">200+</div><div class="p-label">Access points automated</div></div>
+            <div class="p-metric"><div class="p-val">1,000+</div><div class="p-label">Building codes cross-checked</div></div>
+          </div>
+        </div>
+        <div class="case-accordion">
+          <div class="case-row"><span class="c-label">Context</span><span class="c-val">Chevron needed to bulk-update location data for 200+ access points across Wireless LAN Controllers &mdash; a manual process prone to error at scale.</span></div>
+          <div class="case-row"><span class="c-label">My Role</span><span class="c-val"><strong>Software Engineering Intern</strong> &mdash; owned both the automation script and the dashboard design independently.</span></div>
+          <div class="case-row"><span class="c-label">Stack</span><span class="c-val">Python, XML API, user research &mdash; owned both the automation script and the dashboard design independently.</span></div>
+          <div class="case-row"><span class="c-label">Learning</span><span class="c-val">Enterprise automation at scale requires rigorous edge-case thinking &mdash; a lesson that directly shaped how I approach PRD scoping today.</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CREATOR -->
+<section id="creator">
+  <div class="section-label reveal">Creator &amp; Brand Partnerships</div>
+  <h2 class="section-h2 reveal">College. Tech.<br>Lifestyle. Culture.</h2>
+
+  <!-- MARQUEE -->
+  <div class="marquee-wrap" style="margin: 0 -2.5rem 3.5rem; border-radius:0;">
+    <div class="marquee-track">
+      <span class="marquee-item">Dell <span>&#10022;</span></span>
+      <span class="marquee-item">Samsung <span>&#10022;</span></span>
+      <span class="marquee-item">YSL <span>&#10022;</span></span>
+      <span class="marquee-item">Prada <span>&#10022;</span></span>
+      <span class="marquee-item">L&rsquo;Or&eacute;al <span>&#10022;</span></span>
+      <span class="marquee-item">Fabletics <span>&#10022;</span></span>
+      <span class="marquee-item">CollegeBoard <span>&#10022;</span></span>
+      <span class="marquee-item">CalKids <span>&#10022;</span></span>
+      <span class="marquee-item">Azzaro <span>&#10022;</span></span>
+      <span class="marquee-item">ShareTea <span>&#10022;</span></span>
+      <span class="marquee-item">Pridesash <span>&#10022;</span></span>
+      <span class="marquee-item">Microsoft <span>&#10022;</span></span>
+      <span class="marquee-item">Dell <span>&#10022;</span></span>
+      <span class="marquee-item">Samsung <span>&#10022;</span></span>
+      <span class="marquee-item">YSL <span>&#10022;</span></span>
+      <span class="marquee-item">Prada <span>&#10022;</span></span>
+      <span class="marquee-item">L&rsquo;Or&eacute;al <span>&#10022;</span></span>
+      <span class="marquee-item">Fabletics <span>&#10022;</span></span>
+      <span class="marquee-item">CollegeBoard <span>&#10022;</span></span>
+      <span class="marquee-item">CalKids <span>&#10022;</span></span>
+      <span class="marquee-item">Azzaro <span>&#10022;</span></span>
+      <span class="marquee-item">ShareTea <span>&#10022;</span></span>
+      <span class="marquee-item">Pridesash <span>&#10022;</span></span>
+      <span class="marquee-item">Microsoft <span>&#10022;</span></span>
+    </div>
+  </div>
+
+  
+  <!-- TIKTOK VIDEOS -->
+  <div class="tiktok-embeds reveal" style="margin-bottom: 3.5rem;">
+    <div class="section-label" style="margin-bottom: 1.25rem;">Featured content</div>
+    <div class="tiktok-grid-6">
+      <div class="tiktok-card">
+        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@nnaemekaopara_/video/7593827202936950030" data-video-id="7593827202936950030" style="max-width:100%;min-width:0;">
+          <section></section>
+        </blockquote>
+      </div>
+      <div class="tiktok-card">
+        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@nnaemekaopara_/video/7603565607052643598" data-video-id="7603565607052643598" style="max-width:100%;min-width:0;">
+          <section></section>
+        </blockquote>
+      </div>
+      <div class="tiktok-card">
+        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@nnaemekaopara_/video/7628838603036069133" data-video-id="7628838603036069133" style="max-width:100%;min-width:0;">
+          <section></section>
+        </blockquote>
+      </div>
+      <div class="tiktok-card">
+        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@nnaemekaopara_/video/7623878843459325198" data-video-id="7623878843459325198" style="max-width:100%;min-width:0;">
+          <section></section>
+        </blockquote>
+      </div>
+      <div class="tiktok-card">
+        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@nnaemekaopara_/video/7632040827346242830" data-video-id="7632040827346242830" style="max-width:100%;min-width:0;">
+          <section></section>
+        </blockquote>
+      </div>
+      <div class="tiktok-card">
+        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@nnaemekaopara_/video/7545979105930530061" data-video-id="7545979105930530061" style="max-width:100%;min-width:0;">
+          <section></section>
+        </blockquote>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:1.75rem;">
+      <a href="https://www.tiktok.com/@nnaemekaopara_" target="_blank" class="btn-primary" style="font-size:0.75rem;">View all on TikTok &rarr;</a>
+    </div>
+  </div>
+
+    </div>
+  </div>
+  <div class="creator-grid reveal">
+    <div>
+      <div class="creator-numbers">
+        <div class="c-num-cell"><div class="c-big">12.5K</div><div class="c-lbl">Followers</div></div>
+        <div class="c-num-cell"><div class="c-big">5.6M</div><div class="c-lbl">Total views</div></div>
+        <div class="c-num-cell"><div class="c-big">13.79%</div><div class="c-lbl">Engagement rate</div></div>
+        <div class="c-num-cell"><div class="c-big">1.4M</div><div class="c-lbl">Total likes</div></div>
+      </div>
+      <div class="highlight-box">
+        <div class="h-box-num">100K+</div>
+        <div class="h-box-text">Views accumulated across my graduation season sponsored content series &mdash; the highest-performing campaign on the channel.</div>
+      </div>
+      <div class="brands-wrap">
+        <div class="brands-label">Brand partners include</div>
+        <div class="brand-pills">
+          <span class="brand-pill">Dell</span>
+          <span class="brand-pill">Samsung</span>
+          <span class="brand-pill">YSL</span>
+          <span class="brand-pill">Prada</span>
+          <span class="brand-pill">L&rsquo;Or&eacute;al</span>
+          <span class="brand-pill">Fabletics</span>
+          <span class="brand-pill">CollegeBoard</span>
+          <span class="brand-pill">CalKids</span>
+          <span class="brand-pill">Azzaro</span>
+          <span class="brand-pill">ShareTea</span>
+          <span class="brand-pill">Pridesash</span>
+          <span class="brand-pill">+ LA local brands</span>
+        </div>
+      </div>
+      <div class="brands-label" style="margin-bottom:0.75rem;">Services &amp; rates</div>
+      <div class="rates-grid">
+        <div class="rate-cell"><div class="rate-service">Brand promotion</div><div class="rate-price">$700</div></div>
+        <div class="rate-cell"><div class="rate-service">Product review</div><div class="rate-price">$700</div></div>
+        <div class="rate-cell"><div class="rate-service">UGC content video</div><div class="rate-price">$800</div></div>
+        <div class="rate-cell"><div class="rate-service">Brand ambassadorship</div><div class="rate-price">$1,000</div></div>
+      </div>
+      <div style="margin-top:1.75rem;">
+        <a href="mailto:princemekaa@gmail.com" class="btn-primary">Inquire about a partnership &rarr;</a>
+      </div>
+    </div>
+    <div class="creator-right">
+      <div class="creator-photo-grid">
+        <div><img loading="lazy" decoding="async" src="images/img_0.jpg" alt="Nnaemeka Opara at NSBE Region VI conference with colleagues"></div>
+        <div><img loading="lazy" decoding="async" src="images/img_1.jpg" alt="Nnaemeka Opara at AfroTech Conference evening"></div>
+      </div>
+      <p style="font-size:0.95rem;color:var(--ink2);line-height:1.95;margin-bottom:1.5rem;">Through TikTok and Instagram, I document the intersection of the college experience and the tech industry &mdash; helping the next generation of STEM students see themselves in these spaces.</p>
+      <p style="font-size:0.95rem;color:var(--ink2);line-height:1.95;">I handle every partnership end-to-end: outreach, negotiation, creative direction, production, and delivery. Currently building an influencer management agency to represent college creators at scale.</p>
+    </div>
+  </div>
+</section>
+
+<!-- RECOGNITION -->
+<section id="recognition" class="alt">
+  <div class="section-label reveal">Recognition</div>
+  <h2 class="section-h2 reveal">A few things<br>worth noting.</h2>
+  <div class="awards-grid">
+    <div class="award-card">
+      <div class="award-org">Microsoft</div>
+      <div class="award-name">Best Cross-Collaboration Impact Project &mdash; CISO Intern Showcase 2025</div>
+    </div>
+    <div class="award-card">
+      <div class="award-org">USC</div>
+      <div class="award-name">Dean&rsquo;s Scholar &amp; Graduating Senior Student Recognition Award</div>
+    </div>
+    <div class="award-card">
+      <div class="award-org">USC Viterbi</div>
+      <div class="award-name">Grand Challenges Scholar Distinction</div>
+    </div>
+    <div class="award-card">
+      <div class="award-org">MLT</div>
+      <div class="award-name">Early Access MBA Prep Fellow &mdash; 1 of 15 selected nationwide</div>
+    </div>
+    <div class="award-card">
+      <div class="award-org">UNCF / Chevron / PG&amp;E</div>
+      <div class="award-name">Corporate Scholar &mdash; Chevron &amp; PG&amp;E &nbsp;&middot;&nbsp; UNCF Scholar</div>
+    </div>
+    <div class="award-card">
+      <div class="award-org">USC Black Alumni Association</div>
+      <div class="award-name">USC Black Alumni Association Scholar</div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-label reveal">About</div>
+  <div class="about-wrap reveal">
+    <div class="about-photo">
+      <img loading="lazy" decoding="async" src="images/img_4.jpg" alt="Nnaemeka Opara">
+      <div class="about-photo-badge">
+        <div class="about-photo-badge-title">Nnaemeka Opara</div>
+        <div class="about-photo-badge-sub">CS &amp; Business &nbsp;&middot;&nbsp; USC &rsquo;26 &nbsp;&middot;&nbsp; Los Angeles, CA</div>
+      </div>
+    </div>
+    <div class="about-content">
+      <h3 class="about-h">The person<br>behind the <em>work.</em></h3>
+      <p class="about-p">I&rsquo;m a Nigerian-American builder from Los Angeles graduating from USC with a dual degree in Computer Science and Business Administration. I came to USC with one mission: prove that you can be <strong>technical, strategic, and culturally influential</strong> all at once.</p>
+      <p class="about-p">At Microsoft I&rsquo;m shipping security tooling at enterprise scale. On TikTok and Instagram I&rsquo;m helping the next generation of Black STEM students see themselves in the rooms I&rsquo;ve been fortunate to enter. And behind the scenes I&rsquo;m building an influencer management agency dedicated to representing college creators who look like me.</p>
+      <p class="about-p">I&rsquo;m most energized at the intersection of <strong>product strategy, brand partnerships, and community impact</strong> &mdash; and actively exploring opportunities in PM, TPM, and strategic brand partnerships or creator/influencer management.</p>
+      <div class="skills-wrap">
+        <span class="skill-chip">Product Management</span>
+        <span class="skill-chip">Technical PM</span>
+        <span class="skill-chip">Brand Partnerships</span>
+        <span class="skill-chip">Creator Strategy</span>
+        <span class="skill-chip">Agile / Scrum</span>
+        <span class="skill-chip">User Research</span>
+        <span class="skill-chip">Figma</span>
+        <span class="skill-chip">Miro</span>
+        <span class="skill-chip">Python</span>
+        <span class="skill-chip">React</span>
+        <span class="skill-chip">SQL</span>
+        <span class="skill-chip">Azure DevOps</span>
+      </div>
+      <a href="mailto:nopara@usc.edu" class="btn-primary">Get in touch &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-name">Nnaemeka<br>Opara.</div>
+      <p class="footer-tagline">Builder. Strategist. Creator.<br>Bridging tech, brand, and culture.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;">
+      <div class="footer-links-col">
+        <div class="footer-links-label">Connect</div>
+        <ul class="footer-links-list">
+          <li><a href="mailto:nopara@usc.edu">nopara@usc.edu &rarr;</a></li>
+          <li><a href="https://www.linkedin.com/in/nnaemeka-opara/" target="_blank">LinkedIn &rarr;</a></li>
+          <li><a href="https://www.tiktok.com/@nnaemekaopara_" target="_blank">TikTok &rarr;</a></li>
+        </ul>
+      </div>
+      <div class="footer-links-col">
+        <div class="footer-links-label">Navigate</div>
+        <ul class="footer-links-list">
+          <li><a href="#work">Work</a></li>
+          <li><a href="#creator">Creator</a></li>
+          <li><a href="#recognition">Recognition</a></li>
+          <li><a href="#about">About</a></li>
+        <li><a href="resume.pdf" target="_blank">Résumé ↗</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 Nnaemeka Opara</span>
+    <span>Built with intention.</span>
+  </div>
+</footer>
+
+<script>
+// Custom cursor
+const cursor = document.getElementById('cursor');
+let mx = 0, my = 0, cx = 0, cy = 0;
+document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+function animCursor() {
+  cx += (mx - cx) * 0.18;
+  cy += (my - cy) * 0.18;
+  cursor.style.left = cx + 'px';
+  cursor.style.top = cy + 'px';
+  requestAnimationFrame(animCursor);
+}
+animCursor();
+document.querySelectorAll('a, button, .proj-card, .award-card, );
+document.addEventListener('mousedown', () => cursor.classList.add('big'));
+document.addEventListener('mouseup', () => cursor.classList.remove('big'));
+
+// Scroll reveal
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      setTimeout(() => e.target.classList.add('visible'), e.target.dataset.delay || 0);
+    }
+  });
+}, { threshold: 0.07 });
+
+document.querySelectorAll('.reveal, .proj-card, .award-card').forEach((el, i) => {
+  if (el.classList.contains('award-card')) el.dataset.delay = (i % 3) * 80;
+  observer.observe(el);
+});
+
+// Animated counters on stat strip
+const counters = document.querySelectorAll(';
+      requestAnimationFrame(step);
+    }
+  });
+}, { threshold: 0.5 });
+counters.forEach(c => numObserver.observe(c));
+
+// Hamburger menu
+const hamburger = document.getElementById('hamburger');
+const mobileNav = document.getElementById('mobileNav');
+hamburger.addEventListener('click', () => {
+  const open = mobileNav.classList.toggle('open');
+  hamburger.classList.toggle('open', open);
+  hamburger.setAttribute('aria-expanded', open);
+  document.body.style.overflow = open ? 'hidden' : '';
+});
+function closeMobileNav() {
+  mobileNav.classList.remove('open');
+  hamburger.classList.remove('open');
+  hamburger.setAttribute('aria-expanded', false);
+  document.body.style.overflow = '';
+}
+</script>
+</body>
+</html>
